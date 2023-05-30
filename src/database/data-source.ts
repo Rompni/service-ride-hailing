@@ -1,22 +1,26 @@
+require('dotenv').config()
+
 import 'reflect-metadata'
 import { DataSource } from 'typeorm'
 import config from 'config'
-require('dotenv').config()
+
 
 const postgresConfig = config.get<{
-  host: string
-  port: number
-  username: string
-  password: string
-  database: string
+host: string
+port: number
+username: string
+password: string
+database: string
+
+
 }>('postgresConfig')
 
 export const AppDataSource = new DataSource({
-  ...postgresConfig,
-  type: 'postgres',
-  synchronize: false,
-  logging: true,
-  entities: ['src/models/**/*.entity{.ts,.js}'],
-  migrations: ['src/migrations/**/*{.ts,.js}'],
-  subscribers: ['src/subscribers/**/*{.ts,.js}']
+   ...postgresConfig,
+   type: 'postgres',
+   synchronize: false,
+   logging: false,
+   entities: ['src/models/**/*.entity{.ts,.js}'],
+   migrations: [process.env.MIGRATION_PATH || 'src/migrations/**/*{.ts,.js}'],
+   subscribers: ['src/subscribers/**/*{.ts,.js}'],
 })
