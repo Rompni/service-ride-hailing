@@ -33,7 +33,7 @@
 }
 ```
 
-`cardToken` is credid card tokenized by wompi
+`cardToken` is credid card tokenized
 
 -  `post /api/v1/ride/` : Create a ride by a rider
 
