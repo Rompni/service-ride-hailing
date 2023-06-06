@@ -7,7 +7,7 @@ import { DriverEntity } from '../models/driver.entity'
 export class Migrations1685405382824 implements MigrationInterface {
    name: 'Migrations1685405382824'
 
-   public async down(queryRunner: QueryRunner): Promise<void> {}
+   public async down(queryRunner: QueryRunner): Promise<void> { }
 
    public async up(queryRunner: QueryRunner): Promise<void> {
       await queryRunner.query(
@@ -38,11 +38,11 @@ export class Migrations1685405382824 implements MigrationInterface {
 
       // 2 riders available
       await queryRunner.query(
-         `INSERT INTO riders (id, "userId", "currentUbication", status) VALUES ('c2dc2bfe-fe7a-11ed-be56-0242ac120004', 'a9fef8f2-fe7d-11ed-be56-0242ac120002', '{ lat: 40, long: -20 }', 'available' ) `
+         `INSERT INTO riders (id, "userId", "currentUbication", status) VALUES ('c2dc2bfe-fe7a-11ed-be56-0242ac120004', 'a9fef8f2-fe7d-11ed-be56-0242ac120002', '{ "lat": 40, "long": -20 }', 'available' ) `
       )
 
       await queryRunner.query(
-         `INSERT INTO riders (id, "userId", "currentUbication", status) VALUES ('c2dc2bfe-fe7a-11ed-be56-0242ac120005', 'ae7d1a44-fe7d-11ed-be56-0242ac120002', '{ lat: 50, long: -20 }', 'available' ) `
+         `INSERT INTO riders (id, "userId", "currentUbication", status) VALUES ('c2dc2bfe-fe7a-11ed-be56-0242ac120005', 'ae7d1a44-fe7d-11ed-be56-0242ac120002', '{ "lat": 50, "long": -20 }', 'available' ) `
       )
    }
 }

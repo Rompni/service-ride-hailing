@@ -37,7 +37,7 @@
     "typeorm": "^0.3.16"
   },
   "scripts": {
-    "start:dev": "ts-node-dev --respawn --transpile-only --exit-child src/app.ts",
+    "start": "ts-node-dev --respawn --transpile-only --exit-child src/app.ts",
     "typeorm:create": "typeorm-ts-node-commonjs migration:generate './src/migrations/migrations' -d ./src/database/data-source.ts",
     "typeorm:run": "typeorm-ts-node-commonjs migration:run -d ./src/database/data-source.ts",
     "typeorm:drop": "typeorm-ts-node-commonjs schema:drop -d ./src/database/data-source.ts",

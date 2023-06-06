@@ -14,8 +14,9 @@
 
 ### Drivers
 
-    tempmail@driver.com: testpassword
-    tempmail1@driver.com: testpassword
+    tempmail@driver.com: testpassword - user_id: 4ce17eae-fe7a-11ed-be56-0242ac120002 - driverId: c2dc2bfe-fe7a-11ed-be56-0242ac120002
+    tempmail1@driver.com: testpassword - user_id: a4b11f60-fe7d-11ed-be56-0242ac120002 - driverId: c2dc2bfe-fe7a-11ed-be56-0242ac120003
+
 
 ### Riders
 

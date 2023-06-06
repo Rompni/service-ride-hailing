@@ -30,10 +30,10 @@ export class RideEntity extends Model {
    @Column()
    driverId: string
 
-   @Column({ type: 'simple-json' })
+   @Column({ type: 'jsonb' })
    origin: ILatLong
 
-   @Column({ type: 'simple-json', nullable: true })
+   @Column({ type: 'jsonb', nullable: true })
    destination: ILatLong
 
    @Column({ nullable: true })

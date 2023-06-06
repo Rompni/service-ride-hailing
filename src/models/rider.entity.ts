@@ -15,7 +15,7 @@ export class RiderEntity extends Model {
    @Column()
    userId: string
 
-   @Column({ type: 'simple-json' })
+   @Column({ type: 'jsonb' })
    currentUbication: ILatLong
 
    @OneToMany((type) => RideEntity, (ride) => ride.id)
