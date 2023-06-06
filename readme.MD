@@ -72,3 +72,10 @@
 
 `email`: is the email of the user
 `password`: is the password of the user
+
+## Running
+
+1. Login with a rider and create a payment method with the token card `POST /api/v1/rider/payment-method`
+2. Create a ride with the id of payment method created `post /api/v1/ride/`
+3. Login with a driver and finish the ride with the id and ubication(lat-long) `post /api/v1/ride/finish`
+4. You can see the transaction of the ride using the payments API
